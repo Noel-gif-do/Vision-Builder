@@ -59,6 +59,13 @@
     #projets h3 { color: gold; font-size: 24px; margin-top: 10px; }
     #projets h3: :after{Content: ""; display: block; width: 45px; height: 3px; background-color: #D4AF37; margin-top: 5px; margin-bottom: 8px; }
     .projets-image { width: 100%; max-width: 800px; height: auto; border-radius: 12px; display: block; margin: 20px auto; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); transition: transform 0.3s ease; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    table th, table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    table th { background-color: #f2f2f2; }
+    @media (max-width: 768px) {
+        table, table th, table td { font-size: 14px; }
+    }
+    tr:hover { background-color: #f5f5f5; color:#142E54; transition: background-color 0.3s ease; }
 </style>
 </head>
 <body>
@@ -72,7 +79,7 @@
     <section id="apropos" >
         <h2>A propos de Vision Builder</h2>
         <p>Vision Builder est une entreprise ambitieuse qui transforme les idées en projets concrets</p>
-        <img src="./4.PNG" alt="image 4" class="projets-image">
+        <img src="./4.PNG" alt="image 4" style="width: 500px; height: auto; margin-top: 10px;>
     </section>
     <section id="activités">
         <h2>Nos Activités</h2>
@@ -88,6 +95,7 @@
         <p>Installation et maintenance des infrastructures de télécommunications</p>
         <h3>Énergie Solaire</h3>
         <p>Solution d'installation et de maintenance de systèmes d'énergie solaire</p>
+        <img src="./5.JPG" alt="image 5" style="width: 500px; height: auto; margin-top: 10px;>
         <h3>Trading</h3>
         <p>Investissement et développement financier.(Indices Synthetiques)</p>
         <ol>
@@ -121,7 +129,7 @@
     </section>
     <section id="Projets">
         <h2>Nos Projets</h2>
-        <img src="./2.PNG" alt="image 2" class="projets-image">
+        <img src="./2.PNG" alt="image 2"  style="width: 500px; height: auto; margin-top: 10px;>
         <p>Des projets concretes, un impact durable.</p>
         <ol>
             <li>Étude du projet</li>
@@ -135,6 +143,30 @@
         <h3>Infrastructure</h3>
         <p>Conception, construction et realisation d'infrastructures modernes dans les domaines du BTP, des Télécommunications et des traveaux publics.</p>
         <section id="contacts">
+        <h3>Suivi de nos Projets</h3>
+        <table>
+            <tr>
+                <th>Projet</th>
+                <th>Localisation</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>Projet immobilier</td>
+                <td>Libreville</td>
+                <td>En cours</td>
+            </tr>
+            <tr>
+                <td>Installation Solaire</td>
+                <td>Port-Gentil</td>
+                <td>En attente</td>
+            </tr>
+            <tr>
+                <td>Infrastructure Télécom</td>
+                <td>Franceville</td>
+                <td>Planification</td>
+            </tr>
+            <th>Budget</th>
+        </table>
             <h2>Contactez-nous</h2>
             <a href="Https://wa.me/24177920249"target="_blank">
                 Contactez-nous sur Whatsapp

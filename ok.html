@@ -66,13 +66,25 @@
         table, table th, table td { font-size: 14px; }
     }
     tr:hover { background-color: #f5f5f5; color:#142E54; transition: background-color 0.3s ease; }
-    .projet-card { background-color: #f9f9f9; color: #142E54; padding: 20px; margin: 20px auto; border-radius: 12px; max-width: 600px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); transition: transform 0.3s ease; }
+    .projet-card { background-color: #f9f9f9; color: #142E54; padding: 20px; margin: 20px auto; border-radius: 12px; max-width: 600px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); transition: transform 0.3s ease;  }
     .projet-card h3 { color: #D4AF37; font-size: 22px; margin-top: 0; }
     @media (max-width: 768px) {
         .projet-card { Flex-direction: column; padding: 15px; display: flex; align-items: center; gap: 20px; }
         .projet-card img { width:100%;}
         
     }
+    /* DESIGN DU TABLEAU DE SUIVI DES PROJETS */
+    #suivi-projets h3{ color: #d4af37; font-size: 26px; }
+    #suivi-projets table { width: 90%; border-collapse: collapse; margin: 25px auto; background-color: white; color: navy; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); }
+    #suivi-projets th, #suivi-projets td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+    #suivi-projets th { background-color: #d4af37; color: navy; font-weight: bold; }
+    #suivi-projets tr:hover { background-color: #f5f5f5; color: #142E54; transition: background-color 0.3s ease; }
+    /*COULEURS DES STATUS*/
+    .status-en-cours { color: green; font-weight: bold; }
+    .status-en-attente { color: orange; font-weight: bold; }
+    .status-planification { color: blue; font-weight: bold; }
+    #Contact a { display: inline-block; background-color: #25D366; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; transition: background-color 0.3s ease; }
+    #contact a:hover { background-color: #128C7E; transform: scale(1.05); transition: 0.3s; }
     
 </style>
 </head>
@@ -157,33 +169,42 @@
         <p>Conception et développement de projets immobiliers ambitieux, avec une vision moderne, durable tournée vers l'avenir .</p>
         <h3>Infrastructure</h3>
         <p>Conception, construction et realisation d'infrastructures modernes dans les domaines du BTP, des Télécommunications et des traveaux publics.</p>
-        <section id="contacts">
+        </section>
+        <section id="suivi-projets">
         <h3>Suivi de nos Projets</h3>
         <table>
             <tr>
                 <th>Projet</th>
                 <th>Localisation</th>
                 <th>Status</th>
+                <th>Budget</th>
             </tr>
             <tr>
                 <td>Projet immobilier</td>
                 <td>Libreville</td>
-                <td>En cours</td>
+                <td class="status-en-cours">En cours</td>
+                <td>À définir</td>
             </tr>
             <tr>
                 <td>Installation Solaire</td>
                 <td>Port-Gentil</td>
-                <td>En attente</td>
+                <td class="status-en-attente">En attente</td>
+                <td>À définir</td>
             </tr>
             <tr>
                 <td>Infrastructure Télécom</td>
                 <td>Franceville</td>
-                <td>Planification</td>
+                <td class="status-planification">Planification</td>
+                <td>À définir</td>
             </tr>
-            <th>Budget</th>
+            
+            </tr>
+            
         </table>
+        </section>  
+        <section id="contact">
             <h2>Contactez-nous</h2>
-            <a href="Https://wa.me/24177920249"target="_blank">
+            <a href="Https://wa.me/24177920249"class=btn-contact" target="_blank">
                 Contactez-nous sur Whatsapp
             </a>
             <p>Vous avez un projet, n'hésitez pas à nous contacter.</p>
@@ -214,5 +235,16 @@
         <p>&copy; 2026 Vision Builder. Tous droits réservés.</p>
         
     </Footer>
+    <!--Ton contenu déjà existant -->
+    <h2>VISION BUILDER DIGITAL</h2>
+    <hr>
+    <p>Transformer votre vision<br>en réalité.</p>
+    <hr>
+    <pre>NOS ACTIVITÉS
+    1. Télécommunication
+    2. Développement Web
+    3. Intelligence Artificielle
+    4. Énergie Solaire
+    </pre>
 </body>
 </html>

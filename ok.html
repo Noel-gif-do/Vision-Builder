@@ -15,7 +15,7 @@
     nav a:hover { color: white; }
     section { Background-color: White; color: Navy; padding: 40px; margin: 30px; border-radius: 10px; border: 1px solid #eeeeee; border-left: 4px solid #d4af37; box-shadow: 0px 8px rgba(0, 0, 0, 0.08);}
     #activités (background-color: Navy; color: white; padding: 40px; margin: 30px; border-radius: 10px; )
-    #activités h2 { color: gold; font-size: 30px; margin-bottom: 20px; }
+    #activites h2 { color: gold; font-size: 30px; margin-bottom: 20px; }
     #projets { background-color:white; color: navy; padding: 40px; margin: 30px; border-radius: 10px; }
     #projets h2 { color: gold; font-size: 30px; margin-bottom: 20px; }
     #contact { background-color: Navy; color: white; padding: 40px; margin: 30px; border-radius: 10px; }
@@ -85,7 +85,12 @@
     .status-planification { color: blue; font-weight: bold; }
     #Contact a { display: inline-block; background-color: #25D366; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; transition: background-color 0.3s ease; }
     #contact a:hover { background-color: #128C7E; transform: scale(1.05); transition: 0.3s; }
-    
+    #Commentaires { background-color: #f4f4f4; color: #142E54; padding: 30px; margin: 30px auto; border-radius: 10px; max-width: 700px; }
+    #commentaires input, #commentaires textarea { width: 90%; padding: 12px; margin-top: 10px; border: 1px solid #ccc; border-radius: 5px; }
+    #commentaires button { background-color: #142E24; color: #White; font-weight: bold; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); }
+    #commentaires button:hover { background-color: #111111; color: #D4AF37; transform: translateY(-3px); }
+    #retourhaut { position: fixed; bottom: 20px; right: 20px; background-color: #D4AF37; color: #111111; font-weight: bold; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); transition: background-color 0.3s ease, transform 0.3s ease; }
+    #retourhaut:hover { background-color: #111111; color: #D4AF37; transform: translateY(-3px); }
 </style>
 </head>
 <body>
@@ -93,7 +98,7 @@
         <a href="#accueil">Accueil</a>
         <a href="#apropos">A propos</a>
         <a href="#activites">Nos Activités</a>
-        <a href="#contacts">Contacts</a>
+        <a href="#contact">Contact</a>
         <a href="#projets">Projets</a>
     </nav>
     <section id="apropos" >
@@ -202,7 +207,7 @@
             
         </table>
         </section>  
-        <section id="contacts">
+        <section id="contact">
             <h2>Contactez-nous</h2>
             <a href="Https://wa.me/24177920249"class=btn-contact" target="_blank">
                 Contactez-nous sur Whatsapp
@@ -228,6 +233,7 @@
         <p>Vous avez un projet, n'hésitez pas à nous contacter.</p>
         <p>Email: contact@visionbuilder.com</p>
         <p>Téléphone: 00241 77 92 02 49</p>
+
     </section>
     <Footer>
         <h3>Vision Builder</h3>
@@ -246,5 +252,19 @@
     3. Intelligence Artificielle
     4. Énergie Solaire
     </pre>
+    <!-- ESPACE COMMENTAIRES -->
+     <section id="commentaires">
+        <h2>Vos commentaires</h2>
+        <p>Votre avis nous intéresse.</p>
+        <form>
+            <input type="text" placeholder="votre nom" required>
+            <br><br>
+            <textarea placeholder="Écrivez votre commentaire ici..." required></textarea>
+            <br><br>
+            <button type="submit">Envoyer</button>
+        </form>
+     </section>
+     <!-- BOUTON RETOUR EN HAUT -->
+      <button id="retourhaut" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Retour en haut</button>
 </body>
 </html>

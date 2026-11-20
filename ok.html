@@ -2,7 +2,13 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vision Builder</title>
+<style>* { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: white; color: white; font-family: Arial; }
+    header { width: 100%; padding: 22px 6%; background-color: #142E24; display: flex; justify-content: space-between; align-items: center; }
+    .logo { color: #D4AF37; font-size: 24px; font-weight: bold; }
+</style>
 </head>
 <style>body { background-color: white; color: white; text-align: center;font-family: Arial; margin: 0; padding: 0; }
     h1 { color: gold; font-size: 50px; letter-spacing: 2px
@@ -92,17 +98,35 @@
     #retourhaut { position: fixed; bottom: 20px; right: 20px; background-color: #D4AF37; color: #111111; font-weight: bold; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); transition: background-color 0.3s ease, transform 0.3s ease; }
     #retourhaut:hover { background-color: #111111; color: #D4AF37; transform: translateY(-3px); }
     #accueil { background-image: url("background_accueil.PNG"); background-size: 100% 100%; background-position: center; background-repeat: repeat; padding: 80px 20px; text-align: center; min-height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: white;}
+    Header { background-color: #14152e; color: white; padding: 20px; text-align: center; justify-content: center; align-items: center; }
+    .menu-btn { background: #142E24; border: 2px solid #D4AF37; cursor: pointer; color: white; font-size: 32px; Width: 48px; heigth: 42px; display: flex; gap: 5px; }
+    #menu { display: none; background-color: #142E24; padding: 20px; position: absolute; top: 75px; right: 6%; border-radius: 8px;  flex-direction: column; z-index: 1000; }
+    #menu.active { display: flex; }
+    #menu a { color: white; text-decoration: none; font-size: 16px; transition: color 0.3s ease; }
+    #menu a:hover { color: #D4AF37; }
+    .menu-btn span { display: block; width: 25px; height: 4px; background-color: gold !important; border-radius: 5px; }
 </style>
 </head>
 <body>
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
-    <nav>
-        <a href="#accueil">Accueil</a>
-        <a href="#apropos">A propos</a>
-        <a href="#activites">Nos Activités</a>
-        <a href="#contact">Contact</a>
-        <a href="#projets">Projets</a>
-    </nav>
+    <header>
+        <div class="menu" onclick="toggleMenu()" arial-label="Menu">
+            <svg width="28" height="28" viewbox="0 0 28 28">
+                <path d="M3 6 H25 M3 14 H25 M3 22 H25"
+                stroke="#D4AF34"
+                Stroke-width="3"
+                Stroke-linecap="round"
+                fill="none" />
+            </svg>
+        </div>
+        
+        <nav id="menu">
+            <a href="#apropos">A propos</a>
+            <a href="#activites">Activités</a>
+            <a href="#projets">Projets</a>
+            <a href="#suivi-projets">Suivi Projets</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
     <section id="apropos" >
         <h2>A propos de Vision Builder</h2>
         <p>Vision Builder est une entreprise ambitieuse qui transforme les idées en projets concrets</p>
@@ -253,6 +277,11 @@
         </form>
      </section>
      <!-- BOUTON RETOUR EN HAUT -->
-      <button id="retourhaut" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Retour en haut</button>
+      <button id="RetourHaut" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">retour en haut</button>
+      <script>
+        function toggleMenu() {
+          document.getElementById('menu').classList.toggle('active');
+        }
+      </script>
 </body>
 </html>
